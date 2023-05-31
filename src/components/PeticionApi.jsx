@@ -21,6 +21,12 @@ const PeticionApi = () => {
     }
   };
 
+  const siguientePagina = () => {
+    setPaginacion(paginacion + 1);
+    setProductos([]);
+  };
+  
+
   return (
     <div>
       <h1 className="text-center">Lista de Productos</h1>
