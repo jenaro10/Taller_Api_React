@@ -25,7 +25,13 @@ const PeticionApi = () => {
     setPaginacion(paginacion + 1);
     setProductos([]);
   };
-  
+
+  const anteriorPagina = () => {
+    if (paginacion > 1) {
+      setPaginacion(paginacion - 1);
+      setProductos([]);
+    }
+  };
 
   return (
     <div>
