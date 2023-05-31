@@ -36,6 +36,10 @@ const PeticionApi = () => {
   return (
     <div>
       <h1 className="text-center">Lista de Productos</h1>
+      <button className="btn btn-primary" onClick={anteriorPagina} disabled={paginacion === 1}>
+        Anterior
+      </button>
+      <button className="btn btn-primary" onClick={siguientePagina} disabled={paginacion ===2}>Siguiente</button>
     </div>
   );
 };
