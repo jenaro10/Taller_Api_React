@@ -40,6 +40,19 @@ const PeticionApi = () => {
         Anterior
       </button>
       <button className="btn btn-primary" onClick={siguientePagina} disabled={paginacion ===2}>Siguiente</button>
+      <div className="row">
+        {productos.map((producto) => (
+          <div className="col-md-6" key={producto.id}>
+            <div className="card">
+              <img className="card-img-top img-fluid" src={producto.main_image} alt={producto.name} style={{ height: '500px', objectFit: 'cover' }} />
+              <div className="card-body">
+                <h5 className="card-title">{producto.name}</h5>
+                <p className="card-text">Precio: {producto.price}</p>
+                   </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
